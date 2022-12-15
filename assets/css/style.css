@@ -2,3 +2,7 @@
     font-family: 'idroid';
     src: url(assets\fontes\idroid.otf);
 }
+
+body{
+    background-color: bisque;
+}
