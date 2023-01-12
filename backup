@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+    background-color: rgb(160, 109, 47);
+    /*altura para 100%¨do viewport*/
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/*inicialmente as cartas não estavam centralizadas na tela, resolvi o problema botando as especificações do tamanho diretametne no grupo com todas as cartas, já que elas estão posicionadas absolutamente e não teriam mais efeito no tamanho  do wraper, nesse caso o grupo*/
+.grupo-cartas{width: 30vmin;
+    aspect-ratio: 5/7;
+    position:absolute;
+} 
+    
+.carta-grande{  
+    width: 30vmin;
+    aspect-ratio: 5/7;
+    background-color: rgba(168, 145, 145, 0.267);
+    border-radius: 1vmin;
+    position: absolute;
+    transition: transform 900ms cubic-bezier(.18,.77,.4,.94);
+}
+.carta-pequena{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    aspect-ratio: 5/7;
+    border-radius: 2vmin;
+    background-color:rgba(168, 145, 145, 0.267);
+    width: 14vmin;
+    transition: transform 900ms cubic-bezier(.18,.77,.4,.94);
+}
+/*CSS do posicionamento inicial das cartas grandes*/
+.carta-grande:nth-child(1){    
+    background-image: url('../imagens/ballaxy.jpg');
+    background-size: cover; /*background size ajudou muito a ajustar o tamanho das imagens para aparecer nas cartas*/
+    background-repeat: no-repeat;
+    /*no repeat pra ter certeza que não vai ter repetição*/
+    transform: translateX(-8%) rotate(-2deg);    
+}
+.carta-grande:nth-child(2){
+    background-image: url('../imagens/roundlaxy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(5deg);
+}
+.carta-grande:nth-child(3){
+    background-image: url('../imagens/galaxy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(2deg);
+}
+.carta-grande:nth-child(4){
+   background-image: url('../imagens/fireball.jpg');
+   background-size: cover;
+    background-repeat: no-repeat;
+transform: translateX(-15%) rotate(-3deg);
+}
+
+/*CSS cartas pequenas*/
+
+.carta-pequena:nth-child(5){
+    background-image: url(https://images.unsplash.com/photo-1610397648930-477b8c7f0943?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=430&q=80);
+    background-size: contain;
+}
+.carta-pequena:nth-child(6){
+    background-image: url(https://images.unsplash.com/flagged/photo-1555215241-9612144143ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: contain;
+}
+.carta-pequena:nth-child(7){
+    background-image: url(https://images.unsplash.com/photo-1442458017215-285b83f65851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80);
+    background-size: contain;
+}
+.carta-pequena:nth-child(8){
+    background-image: url(https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
+    background-size: contain;
+}
+/*CSS da tranformação quando botar o mouse por cima*/
+.grupo-cartas:hover > .carta-grande:nth-child(1){
+    transform: translate(70%,5%) rotate(8deg);
+}
+
+.grupo-cartas:hover > .carta-pequena:nth-child(5){
+    transform: translate(160%,130%) rotate(5deg);
+}
+
+.grupo-cartas:hover > .carta-grande:nth-child(2){
+    transform: translate(20%) rotate(4deg); 
+}
+
+.grupo-cartas:hover > .carta-pequena:nth-child(6){
+    transform: translate(160%,-170%) rotate(-5deg);
+}
+
+.grupo-cartas:hover > .carta-grande:nth-child(3){
+    transform: translate(-25%) rotate(-3deg);
+} 
+
+.grupo-cartas:hover > .carta-pequena:nth-child(7){
+    transform: translate(-290%,90%) rotate(-5deg);
+}
+.grupo-cartas:hover > .carta-grande:nth-child(4){
+    transform: translate(-65%,5%) rotate(-9deg);
+}
+
+.grupo-cartas:hover > .carta-pequena:nth-child(8){
+    transform: translate(-200%,-190%) rotate(3deg);
+}   
