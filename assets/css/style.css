@@ -103,6 +103,9 @@ div{
     background-color:#063d1e;
 }
 div > iframe{
+    display: flex;
+    align-items: center;
+    object-fit: contain;
     height: 480px;
     padding: 10px;
     width: 98%;
